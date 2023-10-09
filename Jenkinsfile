@@ -46,6 +46,11 @@ pipeline{
 						echo "Jarvis Esele"
 					}
 				}
+                stage('backend'){
+                    steps{
+                        sh 'bash -x /var/lib/jenkins/workspace/sys_stats.sh/
+                    }
+                }
 			}
 		}
 		
