@@ -48,7 +48,7 @@ pipeline{
 				}
                 stage('security_check'){
                     steps{
-                        sh 'bash -x /var/lib/jenkins/workspace/sys_stats.sh/'
+                        sh 'bash -x /var/lib/jenkins/workspace/sys_stats.sh'
                     }
                 }
 			}
