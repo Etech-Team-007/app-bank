@@ -19,6 +19,7 @@ pipeline{
 					}
 				}
 			}
+        }
 		stage('Design'){
 			parallel{
 				stage('3-Terence'){
@@ -47,6 +48,6 @@ pipeline{
 				}
 			}
 		}
-		}
+		
 	}
 }
