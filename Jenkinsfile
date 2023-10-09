@@ -1,7 +1,7 @@
 pipeline{
 	agent any 
 	stages{
-		stage('Checkout'){
+		stage('checkout'){
 			steps{
 				checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'appBankcreds', url: 'https://github.com/Etech-Team-007/app-bank.git']])
 			}
