@@ -6,7 +6,10 @@ pipeline{
 				checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'appBankcreds', url: 'https://github.com/Etech-Team-007/app-bank.git']])
 			}
 		}
-		stage('Plan/Analysis'){
+		stage('Code Deploy To Main'){
+			when {
+				branch 'main'
+			}
 			parallel{
 				stage('1-Ida'){
 					steps{
@@ -21,6 +24,9 @@ pipeline{
 			}
         }
 		stage('Design'){
+			when {
+				branch 'develop'
+			}
 			parallel{
 				stage('3-Terence'){
 					steps{
